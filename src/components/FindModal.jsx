@@ -64,7 +64,7 @@ export default function FindModal({hideMe}) {
                                            }
                                        }}
                                        disabled={isLoading}
-                                       className={"bg-transparent outline-0 w-full font-light disabled:opacity-80 disabled:cursor-not-allowed"}/>
+                                       className={"bg-transparent outline-0 outline-none w-full font-light disabled:opacity-80 disabled:cursor-not-allowed"}/>
                             </div>
                             <button onClick={() => {findById()}} className={"bg-xplor text-white px-3 py-1 rounded-md text-sm font-semibold"}>
                                 Find
