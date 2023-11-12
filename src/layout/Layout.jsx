@@ -36,7 +36,7 @@ export default function Layout({children}) {
                 {children}
             </main>
             <footer className={"container mx-auto text-center py-4 border-t border-gray-300 text-sm font-medium"}>
-                Xplor Assignment
+                Xplor Assignment - {new Date().getFullYear()}
             </footer>
             {showModal ? <FindModal hideMe={hideMe}/> : null}
         </div>
