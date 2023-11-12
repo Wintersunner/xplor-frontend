@@ -25,7 +25,7 @@ export default function Layout({children}) {
                         </div>
                         <div className={"flex-grow flex justify-end"}>
                             <button onClick={() => setShowModal(true)}
-                                    className={"bg-xplor px-6 py-3 rounded-md hover:bg-red-600 transition-all text-white font-semibold text-sm"}>Find
+                                    className={"bg-xplor px-6 py-3 rounded-md hover:bg-red-600 transition-all text-white font-semibold text-xs md:text-sm"}>Find
                                 FizzBuzz By ID
                             </button>
                         </div>

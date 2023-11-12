@@ -43,7 +43,7 @@ export default function FindModal({hideMe}) {
             hideMe()
         }}>
             <div onClick={(e) => e.stopPropagation()}
-                 className={"absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white p-8 bg-slate-100 rounded-md w-1/3"}>
+                 className={"absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white p-8 bg-slate-100 rounded-md w-5/6 xl:w-1/3"}>
                 <div className={"text-black"}>
                     <div className={"border border-gray-400 mb-1 rounded-lg"}>
                         <div className={"font-semibold p-3"}>Enter the ID</div>

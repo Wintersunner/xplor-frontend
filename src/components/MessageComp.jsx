@@ -9,9 +9,9 @@ export default function MessageComp({data}) {
         <div className={"p-3 border mb-2 rounded-lg bg-gray-300 border"}>
             <span className={"font-bold"}>{data.id}</span>. {data.message}
             <hr className={"mt-1 border-gray-500"}/>
-            <div className={"flex items-center mt-2"}>
+            <div className={"flex md:flex-row flex-col md:items-center mt-2"}>
                 <div className={"text-sm text-gray-600 grow"}>{data.useragent}</div>
-                <div className={"text-xs text-gray-600"}>{localTime(data.created_at)}</div>
+                <div className={"text-xs text-gray-600/60 md:text-gray-600 mt-2 md:mt-0 font-medium md:font-normal"}>{localTime(data.created_at)}</div>
             </div>
         </div>
     )
