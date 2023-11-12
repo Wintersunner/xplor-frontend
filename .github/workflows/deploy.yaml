@@ -1,0 +1,23 @@
+name: Build And Deploy
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Project
+        run: |
+          npm ci
+          npm run build
+
+      - name: Install sshpass
+        run: sudo apt install sshpass -y
+
+      - name: SCP Build to Server
+        run: sshpass -p "${{ secrets.PASSWORD }}" scp -o StrictHostKeyChecking=no -P ${{ secrets.PORT }} -r ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/html
+
